@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.avborg</groupId>
     <artifactId>realese-plugin-test</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.2-SNAPSHOT</version>
+    <version>${main-module}</version>
 
+    <properties>
+        <main-module>0.1.0-SNAPSHOT</main-module>
+        <bi-webapp-version>1.0-SNAPSHOT</bi-webapp-version>
+    </properties>
     <modules>
         <module>BI-webapp</module>
         <module>BI-webapp-distr</module>
@@ -21,12 +27,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <!--<configuration>-->
-                    <!--<tagBase>https://github.com/borgatin/testReleasePlugin/tags</tagBase>-->
-                    <!--<branchBase>https://github.com/borgatin/testReleasePlugin/branches</branchBase>-->
-                    <!--<goals>prepare</goals>-->
-                    <!--<autoVersionSubmodules>true</autoVersionSubmodules>-->
-                <!--</configuration>-->
+                <configuration>
+                    <tagBase>https://github.com/borgatin/testReleasePlugin/tags</tagBase>
+                    <branchBase>https://github.com/borgatin/testReleasePlugin/branches</branchBase>
+                    <goals>prepare</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
             </plugin>
         </plugins>
     </build>
