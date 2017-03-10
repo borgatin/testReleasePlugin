@@ -7,10 +7,7 @@
     <packaging>pom</packaging>
     <version>0.1.1-SNAPSHOT</version>
 
-    <properties>
-        <main-module>0.1.0-SNAPSHOT</main-module>
-        <bi-webapp-version>1.0-SNAPSHOT</bi-webapp-version>
-    </properties>
+
     <modules>
         <module>BI-webapp</module>
         <module>BI-webapp-distr</module>
